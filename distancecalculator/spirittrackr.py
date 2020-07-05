@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 
+#Haversine Formula to calculate the distance between two points on a sphere, (code sample from Google)
 def haversine_distance(latitude1, longitude1, latitude2, longitude2):
    r = 6371
    phi1 = np.radians(latitude1)
@@ -12,8 +13,10 @@ def haversine_distance(latitude1, longitude1, latitude2, longitude2):
    return np.round(res, 2)
 
 #In a real app, this current latitude and longitude would be fetched in real time via Google Maps API
-#For this demo, we have used  Harold M. Brathwaite Secondary School as the current location
-currentlatitude, currentlongitude = 43.739408, -79.770568
+#However, Google Maps API is paid, so we cannot use their services at this time
+#For this demo, the user manually enters their latitude and longitude
+currentlatitude = float(input("What is your current latitude?"))
+currentlongitude = float(input("What is your current longitude?"))
 
 landmarks = pd.DataFrame(data={
    'Landmark': ['Kwakiutl Statue', 'Neyagawa Park', 'Bronte Harbour'],
@@ -30,3 +33,19 @@ for row in landmarks.itertuples(index=False):
 landmarks['Distance (km)'] = distances_km
 
 print (landmarks)
+
+#Output to determine whether or not to send notification
+if distances_km[0] < 5:
+   print("You are nearby the Kwakiutl Statue!")
+else:
+   print("You are not nearby the Kwakiutl Statue!")
+
+if distances_km[1] < 5:
+   print("You are nearby Neyagawa Park!")
+else:
+   print("You are not nearby Neyagawa Park!")
+
+if distances_km[2] < 5:
+   print("You are nearby Bronte Harbour!")
+else:
+   print("You are not nearby Bronte Harbour!")
