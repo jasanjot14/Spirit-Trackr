@@ -1,5 +1,5 @@
 const { ml5 } = window; // recalled the ml5 library
-const classifier = ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/eWLyrlvSW/model.json", console.log);// recalls google teachablemachine link and code
+const classifier = ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/O3pfaM4ZA//model.json", console.log);// recalls google teachablemachine link and code
 //created a new imageClassifier using the previous function.
 
 
