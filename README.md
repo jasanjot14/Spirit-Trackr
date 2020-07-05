@@ -10,19 +10,19 @@ As you travel across Canada, you will be able to find specific landmarks on the 
 
 These experience points will show up on your profile. You can compete with people across Canada as well as your friends by looking at the leaderboard. This provides an incentive to travel across Canada and visit specific Indigenous landmarks and engage with Indigenous culture. 
 
-## How we built it# 
+## How we built it
 The app prototype was built in Adobe XD, a software designed to help map out mobile applications. The notification code was created through Python, and the landmark recognition model was created through machine learning with Javascript using google teachable machines and the ml5 library. We sourced the ml5 library and recalled our google teachable model so that the images could be accurately classified. 
 
-## Challenges we ran into# 
+## Challenges we ran into
 We knew we didn't have enough time to make a fully working app in two days, so we decided to use a new application called Adobe XD to map out the app and show off our design skills. In terms of the notification code, we wanted to use the Google Maps API to track our location and determine if we are nearby landmarks. However, the Google Maps API was no longer free, and we could no longer use it. To work around this, we made a code that uses the Haversine formula to calculate the distance between two coordinates on Earth. Another challenge we ran into was creating the camera so that mobile users could have the option to either upload the image or take a fresh new picture. We overcome this challenge by creating a function which allows an upload file input this way when a mobile user is accessing the app instead of having a designated camera it will use the mobile device camera or upload from past pictures.   
 
 ## Accomplishments we're proud of
 We were happy to see that our Adobe XD prototype was working, as it was amazing to see the app in our drafts come to life without real code. It was also a heartwarming feeling when we were able to simulate the Google Maps API with the Haversine formula. It was a beautiful piece of workaround code that ended up being useful. Training the image classification module was a very lengthy process. It had to be prepared with various images near to perfection; we taught around seven different places/items while using 100 images to teach them. By recalling the google machine database, we were able to recognize any image that fits into the category. 
 
 
-## What's We Learned# 
+## What's We Learned
 We learned how to effectively use Adobe XD as a substitute for creating real apps. We also learned how to work around Google API problems with hard code and research. This was also our first time using Microsoft Video Editor to create the video.  We also learned how to use the ml5 library to create small intriguing modules which we plan to use for other projects. We also learned how to use HTML and CSS and incorporate it with java to make a visually appealing web app. Over it was indeed an excellent experience, and we learnt a lot about video editing and ml5 ai modules.  
 
 
-## What's Next for SpiritTrackR#
+## What's Next for SpiritTrackR
 The next steps for our project are to use Xcode and android studios to code out the UI prototype into a real global app with help from developers and get financial support to hire people to update the media catalogue of various territories. We would also like to enhance our image classification ai module further, as due to time constraints, we were only able to add seven different categories (Veteran Monument, Saamis Teepee, Inukshuk, Totem Pole, Anishinaabe Scout, Mr.Bannock Foodtruck, Sixteen Mile Creek). We would also like to enhance the website experience by adding an option to take pictures from laptop devices and integrate the entire image classification code with the UI app. 
