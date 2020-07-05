@@ -6,6 +6,8 @@ const classifier = ml5.imageClassifier("https://teachablemachine.withgoogle.com/
 const result = document.querySelector(".result h2");
 const image = document.querySelector(".image");
 //these functions allow us to use the HTMLelement with the class of image in our index file
+
+async function  classifyImage() {
   const results = await classifier.classify(image);
   result.innerText = results[0].label;
 }// classfies image and labels to most probabable result
